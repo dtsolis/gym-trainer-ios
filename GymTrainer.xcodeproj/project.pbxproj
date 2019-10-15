@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34A4303A2351EC03000839E2 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A430392351EC03000839E2 /* ToDoItem.swift */; };
+		34A4303C2351F952000839E2 /* ToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4303B2351F952000839E2 /* ToDoItemView.swift */; };
 		8DCBDF082351D1B300C80CA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBDF072351D1B300C80CA2 /* AppDelegate.swift */; };
 		8DCBDF0A2351D1B300C80CA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBDF092351D1B300C80CA2 /* SceneDelegate.swift */; };
 		8DCBDF0D2351D1B300C80CA2 /* GymTrainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBDF0B2351D1B300C80CA2 /* GymTrainer.xcdatamodeld */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34A430392351EC03000839E2 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		34A4303B2351F952000839E2 /* ToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemView.swift; sourceTree = "<group>"; };
 		8DCBDF042351D1B300C80CA2 /* GymTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCBDF072351D1B300C80CA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DCBDF092351D1B300C80CA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 		8DCBDEFB2351D1B300C80CA2 = {
 			isa = PBXGroup;
 			children = (
+				34A4303B2351F952000839E2 /* ToDoItemView.swift */,
 				8DCBDF062351D1B300C80CA2 /* GymTrainer */,
 				8DCBDF202351D1B500C80CA2 /* GymTrainerTests */,
 				8DCBDF2B2351D1B500C80CA2 /* GymTrainerUITests */,
@@ -104,6 +109,7 @@
 				8DCBDF072351D1B300C80CA2 /* AppDelegate.swift */,
 				8DCBDF092351D1B300C80CA2 /* SceneDelegate.swift */,
 				8DCBDF0E2351D1B300C80CA2 /* ContentView.swift */,
+				34A430392351EC03000839E2 /* ToDoItem.swift */,
 				8DCBDF102351D1B500C80CA2 /* Assets.xcassets */,
 				8DCBDF152351D1B500C80CA2 /* LaunchScreen.storyboard */,
 				8DCBDF182351D1B500C80CA2 /* Info.plist */,
@@ -271,7 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DCBDF082351D1B300C80CA2 /* AppDelegate.swift in Sources */,
+				34A4303C2351F952000839E2 /* ToDoItemView.swift in Sources */,
 				8DCBDF0D2351D1B300C80CA2 /* GymTrainer.xcdatamodeld in Sources */,
+				34A4303A2351EC03000839E2 /* ToDoItem.swift in Sources */,
 				8DCBDF0F2351D1B300C80CA2 /* ContentView.swift in Sources */,
 				8DCBDF0A2351D1B300C80CA2 /* SceneDelegate.swift in Sources */,
 			);
@@ -443,6 +451,7 @@
 				DEVELOPMENT_TEAM = PC8FS8VHSM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GymTrainer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,6 +472,7 @@
 				DEVELOPMENT_TEAM = PC8FS8VHSM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GymTrainer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
