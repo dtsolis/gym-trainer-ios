@@ -4,9 +4,9 @@
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
-    <entity name="Training" representedClassName=".Training" syncable="YES">
+    <entity name="Training" representedClassName=".Training" elementID="training_rename_id" syncable="YES">
+        <attribute name="about" optional="YES" attributeType="String" elementID="about_rename_id"/>
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Payment" positionX="-63" positionY="9" width="128" height="73"/>

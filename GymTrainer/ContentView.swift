@@ -10,31 +10,24 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @Environment(\.managedObjectContext) var managedObjectContext
-    @FetchRequest(fetchRequest: ToDoItem.getAllToDoItems()) var toDoItems:FetchedResults<ToDoItem>
+//    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(fetchRequest: Training.getAllToTrainings()) var trainings:FetchedResults<Training>
     
-    @State private var newToDoItem = ""
-    
+    @State private var newTrainingItem = ""
     
     var body: some View {
-        NavigationView{
+        NavigationView {
             List {
                 Section(header: Text("Next training")){
                     HStack{
-                        TextField("New Training", text: self.$newToDoItem)
+                        TextField("Short description", text: self.$newTrainingItem)
                         Button(action: {
-                            let toDoItem = ToDoItem(context: self.managedObjectContext)
-                            toDoItem.title = self.newToDoItem
-                            toDoItem.createdAt = Date()
-                            
                             do {
-                                try self.managedObjectContext.save()
-                            }catch{
+                                try TrainingsService.createTraining(self.newTrainingItem)
+                            } catch {
                                 print(error)
                             }
-                            
-                            self.newToDoItem = ""
-                            
+                            self.newTrainingItem = ""
                         }){
                             Image(systemName: "plus.circle.fill")
                                 .foregroundColor(.green)
@@ -42,16 +35,15 @@ struct ContentView: View {
                         }
                     }
                 }.font(.headline)
-                Section(header: Text("To Train")) {
-                    ForEach(self.toDoItems) {toDoItem in
-                        ToDoItemView(title: toDoItem.title!, createdAt: "\(toDoItem.createdAt!)")
-                    }.onDelete{indexSet in
-                        let deleteItem = self.toDoItems[indexSet.first!]
-                        self.managedObjectContext.delete(deleteItem)
-                        
+                Section(header: Text("Trainings")) {
+                    ForEach(self.trainings) { training in
+                        NavigationLink(destination: TrainingDetailsView(training: training)) {
+                            TrainingRow(training: training)
+                        }
+                    }.onDelete { indexSet in
                         do {
-                            try self.managedObjectContext.save()
-                        }catch{
+                            try TrainingsService.deleteTraining(self.trainings[indexSet.first!])
+                        } catch {
                             print(error)
                         }
                     }
@@ -60,7 +52,6 @@ struct ContentView: View {
             .navigationBarTitle(Text("My trainings"))
             .navigationBarItems(trailing: EditButton())
         }
-        
     }
 }
 

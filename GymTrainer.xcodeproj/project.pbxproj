@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34A4303A2351EC03000839E2 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A430392351EC03000839E2 /* ToDoItem.swift */; };
-		34A4303C2351F952000839E2 /* ToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4303B2351F952000839E2 /* ToDoItemView.swift */; };
+		34A4303A2351EC03000839E2 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A430392351EC03000839E2 /* Training.swift */; };
+		34A4303C2351F952000839E2 /* TrainingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4303B2351F952000839E2 /* TrainingRow.swift */; };
+		8D464D81235E29E400AFADCB /* TrainingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D464D80235E29E400AFADCB /* TrainingsService.swift */; };
+		8D464D83235E2F9400AFADCB /* TrainingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D464D82235E2F9400AFADCB /* TrainingDetailsView.swift */; };
+		8D587559235E0D70007BBB3B /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D587558235E0D70007BBB3B /* Payment.swift */; };
+		8D58755A235E0D70007BBB3B /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D587558235E0D70007BBB3B /* Payment.swift */; };
+		8D58755B235E0D70007BBB3B /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D587558235E0D70007BBB3B /* Payment.swift */; };
+		8D58755D235E1392007BBB3B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D58755C235E1392007BBB3B /* CoreDataManager.swift */; };
+		8D58755E235E1392007BBB3B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D58755C235E1392007BBB3B /* CoreDataManager.swift */; };
+		8D58755F235E1392007BBB3B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D58755C235E1392007BBB3B /* CoreDataManager.swift */; };
 		8DCBDF082351D1B300C80CA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBDF072351D1B300C80CA2 /* AppDelegate.swift */; };
 		8DCBDF0A2351D1B300C80CA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBDF092351D1B300C80CA2 /* SceneDelegate.swift */; };
 		8DCBDF0D2351D1B300C80CA2 /* GymTrainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBDF0B2351D1B300C80CA2 /* GymTrainer.xcdatamodeld */; };
@@ -38,8 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		34A430392351EC03000839E2 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
-		34A4303B2351F952000839E2 /* ToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemView.swift; sourceTree = "<group>"; };
+		34A430392351EC03000839E2 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
+		34A4303B2351F952000839E2 /* TrainingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRow.swift; sourceTree = "<group>"; };
+		8D464D80235E29E400AFADCB /* TrainingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsService.swift; sourceTree = "<group>"; };
+		8D464D82235E2F9400AFADCB /* TrainingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailsView.swift; sourceTree = "<group>"; };
+		8D587558235E0D70007BBB3B /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		8D58755C235E1392007BBB3B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		8D58758E235E243E007BBB3B /* GymTrainer 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "GymTrainer 2.xcdatamodel"; sourceTree = "<group>"; };
 		8DCBDF042351D1B300C80CA2 /* GymTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCBDF072351D1B300C80CA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DCBDF092351D1B300C80CA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,10 +95,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D587556235E0CD8007BBB3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34A4303B2351F952000839E2 /* TrainingRow.swift */,
+				8D464D82235E2F9400AFADCB /* TrainingDetailsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8D587557235E0CE5007BBB3B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				34A430392351EC03000839E2 /* Training.swift */,
+				8D587558235E0D70007BBB3B /* Payment.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8D58758D235E2100007BBB3B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8D464D80235E29E400AFADCB /* TrainingsService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		8DCBDEFB2351D1B300C80CA2 = {
 			isa = PBXGroup;
 			children = (
-				34A4303B2351F952000839E2 /* ToDoItemView.swift */,
 				8DCBDF062351D1B300C80CA2 /* GymTrainer */,
 				8DCBDF202351D1B500C80CA2 /* GymTrainerTests */,
 				8DCBDF2B2351D1B500C80CA2 /* GymTrainerUITests */,
@@ -109,7 +147,10 @@
 				8DCBDF072351D1B300C80CA2 /* AppDelegate.swift */,
 				8DCBDF092351D1B300C80CA2 /* SceneDelegate.swift */,
 				8DCBDF0E2351D1B300C80CA2 /* ContentView.swift */,
-				34A430392351EC03000839E2 /* ToDoItem.swift */,
+				8D58755C235E1392007BBB3B /* CoreDataManager.swift */,
+				8D58758D235E2100007BBB3B /* Services */,
+				8D587557235E0CE5007BBB3B /* Models */,
+				8D587556235E0CD8007BBB3B /* Views */,
 				8DCBDF102351D1B500C80CA2 /* Assets.xcassets */,
 				8DCBDF152351D1B500C80CA2 /* LaunchScreen.storyboard */,
 				8DCBDF182351D1B500C80CA2 /* Info.plist */,
@@ -276,12 +317,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D464D81235E29E400AFADCB /* TrainingsService.swift in Sources */,
 				8DCBDF082351D1B300C80CA2 /* AppDelegate.swift in Sources */,
-				34A4303C2351F952000839E2 /* ToDoItemView.swift in Sources */,
+				34A4303C2351F952000839E2 /* TrainingRow.swift in Sources */,
+				8D587559235E0D70007BBB3B /* Payment.swift in Sources */,
 				8DCBDF0D2351D1B300C80CA2 /* GymTrainer.xcdatamodeld in Sources */,
-				34A4303A2351EC03000839E2 /* ToDoItem.swift in Sources */,
+				34A4303A2351EC03000839E2 /* Training.swift in Sources */,
 				8DCBDF0F2351D1B300C80CA2 /* ContentView.swift in Sources */,
+				8D58755D235E1392007BBB3B /* CoreDataManager.swift in Sources */,
 				8DCBDF0A2351D1B300C80CA2 /* SceneDelegate.swift in Sources */,
+				8D464D83235E2F9400AFADCB /* TrainingDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +334,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D58755E235E1392007BBB3B /* CoreDataManager.swift in Sources */,
+				8D58755A235E0D70007BBB3B /* Payment.swift in Sources */,
 				8DCBDF222351D1B500C80CA2 /* GymTrainerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +344,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D58755F235E1392007BBB3B /* CoreDataManager.swift in Sources */,
+				8D58755B235E0D70007BBB3B /* Payment.swift in Sources */,
 				8DCBDF2D2351D1B500C80CA2 /* GymTrainerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,9 +662,10 @@
 		8DCBDF0B2351D1B300C80CA2 /* GymTrainer.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				8D58758E235E243E007BBB3B /* GymTrainer 2.xcdatamodel */,
 				8DCBDF0C2351D1B300C80CA2 /* GymTrainer.xcdatamodel */,
 			);
-			currentVersion = 8DCBDF0C2351D1B300C80CA2 /* GymTrainer.xcdatamodel */;
+			currentVersion = 8D58758E235E243E007BBB3B /* GymTrainer 2.xcdatamodel */;
 			path = GymTrainer.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
