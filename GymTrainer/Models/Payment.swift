@@ -10,8 +10,11 @@ import Foundation
 import CoreData
 
 public class Payment: NSManagedObject, Identifiable {
-    @NSManaged public var createdAt:Date?
-    @NSManaged public var updatedAt:Date?
+    @NSManaged public var createdAt: Date?
+    @NSManaged public var updatedAt: Date?
+    @NSManaged public var paidAt: Date?
+    @NSManaged public var paidTrainings: Int32
+    @NSManaged public var amount: Float
 }
 
 extension Payment {

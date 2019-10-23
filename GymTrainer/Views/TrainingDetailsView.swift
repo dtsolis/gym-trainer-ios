@@ -28,17 +28,21 @@ struct TrainingDetailsView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack {
-                Text("Ημερομηνία")
+            VStack(alignment: .leading, spacing: nil) {
+                Text("Trained at")
                     .font(.headline)
+                    .padding(.bottom, 12)
                 Text(self.formattedDate())
-                    .padding(.bottom, 20)
-                Text("Περιγραφή").font(.headline)
+                    .font(.body)
+                    .padding(.bottom, 30)
+                Text("About")
+                    .font(.headline)
+                    .padding(.bottom, 12)
                 Text(self.training?.about ?? "")
+                    .font(.body)
                 Spacer()
             }
-//            .background(Color.red)
-//            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
 //            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .topLeading)
             .padding(12)
         }

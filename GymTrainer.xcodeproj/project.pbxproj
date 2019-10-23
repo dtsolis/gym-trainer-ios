@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		34A4303A2351EC03000839E2 /* Training.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A430392351EC03000839E2 /* Training.swift */; };
 		34A4303C2351F952000839E2 /* TrainingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4303B2351F952000839E2 /* TrainingRow.swift */; };
+		8D44532C235F949300599734 /* TrainingsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D44532B235F949300599734 /* TrainingsListView.swift */; };
+		8D44532E235F96ED00599734 /* MainTabBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D44532D235F96ED00599734 /* MainTabBarManager.swift */; };
+		8D445330235FACF300599734 /* MoreScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D44532F235FACF300599734 /* MoreScreenView.swift */; };
+		8D445333235FB0E500599734 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D445332235FB0E500599734 /* UIApplication.swift */; };
+		8D4453352360E6FF00599734 /* RecentPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4453342360E6FF00599734 /* RecentPaymentView.swift */; };
+		8D4453372360F1D400599734 /* PaymentsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4453362360F1D400599734 /* PaymentsListView.swift */; };
+		8D4453392360F35D00599734 /* PaymentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4453382360F35D00599734 /* PaymentsService.swift */; };
+		8D44533B2360FF3600599734 /* CreateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D44533A2360FF3600599734 /* CreateButton.swift */; };
 		8D464D81235E29E400AFADCB /* TrainingsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D464D80235E29E400AFADCB /* TrainingsService.swift */; };
 		8D464D83235E2F9400AFADCB /* TrainingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D464D82235E2F9400AFADCB /* TrainingDetailsView.swift */; };
 		8D587559235E0D70007BBB3B /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D587558235E0D70007BBB3B /* Payment.swift */; };
@@ -48,6 +56,14 @@
 /* Begin PBXFileReference section */
 		34A430392351EC03000839E2 /* Training.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Training.swift; sourceTree = "<group>"; };
 		34A4303B2351F952000839E2 /* TrainingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRow.swift; sourceTree = "<group>"; };
+		8D44532B235F949300599734 /* TrainingsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsListView.swift; sourceTree = "<group>"; };
+		8D44532D235F96ED00599734 /* MainTabBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarManager.swift; sourceTree = "<group>"; };
+		8D44532F235FACF300599734 /* MoreScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreScreenView.swift; sourceTree = "<group>"; };
+		8D445332235FB0E500599734 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		8D4453342360E6FF00599734 /* RecentPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentPaymentView.swift; sourceTree = "<group>"; };
+		8D4453362360F1D400599734 /* PaymentsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsListView.swift; sourceTree = "<group>"; };
+		8D4453382360F35D00599734 /* PaymentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsService.swift; sourceTree = "<group>"; };
+		8D44533A2360FF3600599734 /* CreateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateButton.swift; sourceTree = "<group>"; };
 		8D464D80235E29E400AFADCB /* TrainingsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingsService.swift; sourceTree = "<group>"; };
 		8D464D82235E2F9400AFADCB /* TrainingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailsView.swift; sourceTree = "<group>"; };
 		8D587558235E0D70007BBB3B /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
@@ -95,11 +111,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D445331235FB0D800599734 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				8D445332235FB0E500599734 /* UIApplication.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
 		8D587556235E0CD8007BBB3B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				34A4303B2351F952000839E2 /* TrainingRow.swift */,
+				8D44532F235FACF300599734 /* MoreScreenView.swift */,
+				8D4453362360F1D400599734 /* PaymentsListView.swift */,
+				8D4453342360E6FF00599734 /* RecentPaymentView.swift */,
 				8D464D82235E2F9400AFADCB /* TrainingDetailsView.swift */,
+				34A4303B2351F952000839E2 /* TrainingRow.swift */,
+				8D44532B235F949300599734 /* TrainingsListView.swift */,
+				8D44533A2360FF3600599734 /* CreateButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				8D464D80235E29E400AFADCB /* TrainingsService.swift */,
+				8D4453382360F35D00599734 /* PaymentsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -148,6 +178,8 @@
 				8DCBDF092351D1B300C80CA2 /* SceneDelegate.swift */,
 				8DCBDF0E2351D1B300C80CA2 /* ContentView.swift */,
 				8D58755C235E1392007BBB3B /* CoreDataManager.swift */,
+				8D44532D235F96ED00599734 /* MainTabBarManager.swift */,
+				8D445331235FB0D800599734 /* Extentions */,
 				8D58758D235E2100007BBB3B /* Services */,
 				8D587557235E0CE5007BBB3B /* Models */,
 				8D587556235E0CD8007BBB3B /* Views */,
@@ -319,14 +351,22 @@
 			files = (
 				8D464D81235E29E400AFADCB /* TrainingsService.swift in Sources */,
 				8DCBDF082351D1B300C80CA2 /* AppDelegate.swift in Sources */,
+				8D4453392360F35D00599734 /* PaymentsService.swift in Sources */,
+				8D445330235FACF300599734 /* MoreScreenView.swift in Sources */,
+				8D44532E235F96ED00599734 /* MainTabBarManager.swift in Sources */,
 				34A4303C2351F952000839E2 /* TrainingRow.swift in Sources */,
 				8D587559235E0D70007BBB3B /* Payment.swift in Sources */,
 				8DCBDF0D2351D1B300C80CA2 /* GymTrainer.xcdatamodeld in Sources */,
 				34A4303A2351EC03000839E2 /* Training.swift in Sources */,
+				8D445333235FB0E500599734 /* UIApplication.swift in Sources */,
+				8D4453372360F1D400599734 /* PaymentsListView.swift in Sources */,
 				8DCBDF0F2351D1B300C80CA2 /* ContentView.swift in Sources */,
+				8D44532C235F949300599734 /* TrainingsListView.swift in Sources */,
+				8D44533B2360FF3600599734 /* CreateButton.swift in Sources */,
 				8D58755D235E1392007BBB3B /* CoreDataManager.swift in Sources */,
 				8DCBDF0A2351D1B300C80CA2 /* SceneDelegate.swift in Sources */,
 				8D464D83235E2F9400AFADCB /* TrainingDetailsView.swift in Sources */,
+				8D4453352360E6FF00599734 /* RecentPaymentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

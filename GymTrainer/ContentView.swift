@@ -10,47 +10,57 @@ import SwiftUI
 
 struct ContentView: View {
     
-//    @Environment(\.managedObjectContext) var managedObjectContext
-    @FetchRequest(fetchRequest: Training.getAllToTrainings()) var trainings:FetchedResults<Training>
-    
-    @State private var newTrainingItem = ""
+    @ObservedObject private var tabManager = MainTabBarManager(initialIndex: 1, customItemIndex: 2)
+    @State private var isOptionsMenuVisible: Bool = false
+
+    var actionSheet: ActionSheet {
+        ActionSheet(
+            title: Text("What do you want to do?"),
+            message: Text(""),
+            buttons: [
+                .default(Text("Training")),
+                .default(Text("Payment")),
+                .cancel(Text("Cancel"))
+            ]
+        )
+    }
     
     var body: some View {
-        NavigationView {
-            List {
-                Section(header: Text("Next training")){
-                    HStack{
-                        TextField("Short description", text: self.$newTrainingItem)
-                        Button(action: {
-                            do {
-                                try TrainingsService.createTraining(self.newTrainingItem)
-                            } catch {
-                                print(error)
-                            }
-                            self.newTrainingItem = ""
-                        }){
-                            Image(systemName: "plus.circle.fill")
-                                .foregroundColor(.green)
-                                .imageScale(.large)
-                        }
-                    }
-                }.font(.headline)
-                Section(header: Text("Trainings")) {
-                    ForEach(self.trainings) { training in
-                        NavigationLink(destination: TrainingDetailsView(training: training)) {
-                            TrainingRow(training: training)
-                        }
-                    }.onDelete { indexSet in
-                        do {
-                            try TrainingsService.deleteTraining(self.trainings[indexSet.first!])
-                        } catch {
-                            print(error)
-                        }
-                    }
+        ZStack {
+            TabView (selection: $tabManager.selectedItem) {
+                TrainingsListView()
+                    .tabItem {
+                        Image(systemName: "list.dash")
+                        Text("Trainings")
+                }.tag(1)
+                
+                Text("placeholder tab for adding the center icon")
+                    .tabItem {
+                        Image(systemName: "plus.circle")
                 }
+                .tag(2)
+                .disabled(true)
+                
+                MoreScreenView()
+                    .tabItem {
+                        Image(systemName: "ellipsis")
+                        Text("More")
+                }.tag(3)
             }
-            .navigationBarTitle(Text("My trainings"))
-            .navigationBarItems(trailing: EditButton())
+            .font(.headline)
+            .accentColor(.red)
+            .sheet(isPresented: $isOptionsMenuVisible, onDismiss: {
+                print("dismiss")
+                
+            }) {
+                Text("provide options for:")
+                Text("1. creating a new training")
+                Text("2. creating a new payment")
+            }
+            
+            CreateButton {
+                self.isOptionsMenuVisible = true
+            }
         }
     }
 }
